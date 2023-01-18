@@ -1,0 +1,19 @@
+.small-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.small-card img {
+    width: 174px;
+    height: 174px;
+    padding-bottom: 20px;
+}
+.title{
+    font-weight: 600;
+    font-size: 20px;
+}
+.artist{
+    font-weight: 400;
+    font-size: 20px;
+}

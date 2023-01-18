@@ -1,0 +1,29 @@
+.big-card{
+    margin: auto;
+    width: 994px;
+    height: 574px;
+    background: #0C0C0C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.auto-card{
+    margin: auto;
+    width: auto;
+    height: 574px;
+    background: #0C0C0C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.big-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+}
+.big-cards-two{
+    text-align: center;
+}
+
