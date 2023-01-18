@@ -11,7 +11,7 @@
 .auto-card{
     margin: auto;
     width: auto;
-    height: 574px;
+    height: auto;
     background: #0C0C0C;
     display: flex;
     flex-direction: column;
