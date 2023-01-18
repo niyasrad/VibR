@@ -9,6 +9,8 @@
     align-items: center;
 }
 .auto-card{
+    padding-top:20px;
+    padding-bottom: 10px;
     margin: auto;
     width: auto;
     height: auto;
@@ -17,6 +19,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    gap: 15px;
 }
 .big-cards{
     display: flex;
