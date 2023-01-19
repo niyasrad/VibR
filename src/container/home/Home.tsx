@@ -55,7 +55,7 @@ export default function Home(props: any) {
             <h1 className='home-par'>Share your Most Liked Songs this <span className='home-strike'>year</span> <span className='home-green'>week</span>.</h1>
             {Object.keys(top).length !== 0 &&
                 <div style={{ position: 'absolute', right: '120%'}}>
-                    <Card ref={componentRef} user="Niyas" custom={true} items={top} limit={3}/>
+                    <Card ref={componentRef} user={user} custom={true} items={top} limit={3}/>
                 </div>
             }
             {token ? 
