@@ -51,7 +51,7 @@ export default function Home(props: any) {
                 <h1>Loading....</h1>
                 ):
                 <SpotifyAuth
-                    redirectUri='https://vib-r.vercel.app/'
+                    redirectUri='http://localhost:3000'
                     clientID='b003c3bcc93049dab0337f6437419ceb'
                     scopes={[Scopes.userReadPrivate, 'user-read-email', 'user-top-read']} // either style will work
                     onAccessToken={(token: any) => setToken(token)}
