@@ -39,7 +39,7 @@ const Card = forwardRef((props: cardProps, ref: any) => {
                     <SmallCard artist={s.artist} title={s.title} img={s.img} />
                 )) }
             </div>
-            <div className="big-cards-two">
+            <div className={props.limit === 3? "big-cards-two" : "big-cards-three"}>
                 <h1>{props.user}'s Week</h1>
                 <img src={vibr} alt='' className='' />
             </div>

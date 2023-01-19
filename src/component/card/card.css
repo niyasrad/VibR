@@ -29,4 +29,13 @@
 .big-cards-two{
     text-align: center;
 }
+.big-cards-three{
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 

@@ -24,13 +24,27 @@ export default function Home(props: any) {
             Cookies.remove('spotifyAuthToken', { path: '', domain: '' })
         })
     }
+    async function queryName() {
+        axios.get("https://api.spotify.com/v1/me", { headers: {"Authorization" : `Bearer ${token}`} })
+        .then(function (response) {
+            setUser(response.data.display_name);
+            console.log("Response:", response)
+          })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+            Cookies.remove('spotifyAuthToken', { path: '', domain: '' })
+        })
+    }
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"))
-    
+    const [user, setUser] = React.useState("User");
     const [top, setTop] = useState({});
     useEffect(() => { 
         if (token) {
             setTop(queryModels(3));
         }
+        queryName();
+        
         
     }, [token])
     console.log(top);
@@ -64,22 +78,22 @@ export default function Home(props: any) {
             <div className="home-display-desktop">
                 {Object.keys(top).length !== 0 ?
                     <div>
-                        <Card ref={componentRef1} user="Niyas" custom={true} items={top} limit={3}/>
-                    </div> : <Card user="Niyas" custom={false} items={{}} limit={3}/>
+                        <Card ref={componentRef1} user={user} custom={true} items={top} limit={3}/>
+                    </div> : <Card user={user} custom={false} items={{}} limit={3}/>
                 }
             </div>
             <div className="home-display-tablet">
                 {Object.keys(top).length !== 0 ?
                     <div>
-                        <Card ref={componentRef1} user="Niyas" custom={true} items={top} limit={2}/>
-                    </div> : <Card user="Niyas" custom={false} items={{}} limit={2}/>
+                        <Card ref={componentRef1} user={user} custom={true} items={top} limit={2}/>
+                    </div> : <Card user={user} custom={false} items={{}} limit={2}/>
                 }
             </div>
             <div className="home-display-mobile">
                 {Object.keys(top).length !== 0 ?
                     <div>
-                        <Card ref={componentRef1} user="Niyas" custom={true} items={top} limit={1}/>
-                    </div> : <Card user="Niyas" custom={false} items={{}} limit={1}/>
+                        <Card ref={componentRef1} user={user} custom={true} items={top} limit={1}/>
+                    </div> : <Card user={user} custom={false} items={{}} limit={1}/>
                 }
             </div>
         </div>
