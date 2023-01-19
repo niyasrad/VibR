@@ -6,7 +6,7 @@ import { StringLiteralLike } from "typescript";
 import closer from '../../assets/closer.png';
 import kokuhaku from '../../assets/kokuhaku.png';
 import dynamite from '../../assets/dynamite.png';
-import { url } from "inspector";
+import logo from '../../assets/logo.png';
 
 interface cardProps{
     user: string;
@@ -30,6 +30,7 @@ const Card = forwardRef((props: cardProps, ref: any) => {
     
     return (
         <div className={props.limit === 3? "big-card" : "auto-card"} ref={ref}>
+            <img className="spotify-logo" src={logo} alt="" />
             <div className="big-cards">
                 {props.custom ? 
                     props.items.data.items.slice(0, props.limit).map((s: any) => (

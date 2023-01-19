@@ -21,6 +21,10 @@
     align-items: center;
     gap: 15px;
 }
+.spotify-logo{
+    width: 200px;
+    height: auto;
+}
 .big-cards{
     display: flex;
     flex-wrap: wrap;
