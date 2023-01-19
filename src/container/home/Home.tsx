@@ -62,7 +62,7 @@ export default function Home(props: any) {
                 (Object.keys(top).length !== 0 ?
                 <div className='home-button' onClick={() => exportComponentAsJPEG(componentRef, { html2CanvasOptions: {backgroundColor: "#0C0C0C", allowTaint: true}})}>GET YOUR <span className='home-green'>CARD</span></div>
                 :
-                <h1>Loading....</h1>
+                <div className="loadingio-spinner-rolling-s4w34mo1ahn"><div className="ldio-xluxjqkwgl"><div></div></div></div>
                 ):
                 <SpotifyAuth
                     redirectUri='https://vib-r.vercel.app/'
