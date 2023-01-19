@@ -10,16 +10,14 @@
     padding-bottom: 20px;
 }
 .title{
+    display: inline-block;
     font-weight: 600;
     font-size: 20px;
-    -moz-window-dragging: 174px;
     max-width: 174px;
-    overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1; /* number of lines to show */
-    line-clamp: 1; 
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
 }
 .artist{
     font-weight: 400;

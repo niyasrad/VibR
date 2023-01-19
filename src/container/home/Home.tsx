@@ -46,7 +46,7 @@ export default function Home(props: any) {
             }
             {token ? 
                 (Object.keys(top).length !== 0 ?
-                <div className='home-button' onClick={() => exportComponentAsJPEG(componentRef)}>GET YOUR <span className='home-green'>CARD</span></div>
+                <div className='home-button' onClick={() => exportComponentAsJPEG(componentRef, { html2CanvasOptions: {backgroundColor: "#0C0C0C", allowTaint: true}})}>GET YOUR <span className='home-green'>CARD</span></div>
                 :
                 <h1>Loading....</h1>
                 ):
