@@ -33,10 +33,11 @@ const Card = forwardRef((props: cardProps, ref: any) => {
             <img className="spotify-logo" src={logo} alt="" />
             <div className="big-cards">
                 {props.custom ? 
+                    props.items.data.items.length >= 3 ?
                     props.items.data.items.slice(0, props.limit).map((s: any) => (
                     <SmallCard artist={s.album.artists[0].name}  title={s.name} img={s.album.images[1]['url']}/>
-                ))
-                :db.slice(0, props.limit).map(s => (
+                )) : <p className="chinese">Hmm. You haven’t listened to many songs this week. Keep Listening!</p>
+                : db.length < 3 ? <p className="chinese">Hmm. You haven’t listened to many songs this week. Keep Listening!</p>  :db.slice(0, props.limit).map(s => (
                     <SmallCard artist={s.artist} title={s.title} img={s.img} />
                 )) }
             </div>

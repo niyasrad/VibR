@@ -37,7 +37,7 @@ export default function Home(props: any) {
         })
     }
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"))
-    const [user, setUser] = React.useState("User");
+    const [user, setUser] = React.useState("Rad");
     const [top, setTop] = useState({});
     useEffect(() => { 
         if (token) {
