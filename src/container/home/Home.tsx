@@ -14,7 +14,7 @@ const { SpotifyApiContext, SpotifyAuth, Scopes } = require('react-spotify-auth')
 
 export default function Home(props: any) {
     async function queryModels(limit: number) {
-        axios.get("https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=" + limit +"&offset=5", { headers: {"Authorization" : `Bearer ${token}`} })
+        axios.get("https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=" + limit +"&offset=0", { headers: {"Authorization" : `Bearer ${token}`} })
         .then(function (response) {
             setTop(response);
           })
